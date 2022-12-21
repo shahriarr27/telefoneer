@@ -1,0 +1,73 @@
+.rated-numbers{
+  .card{
+    border: none;
+    box-shadow: $box-shadow-dark;
+    padding: 20px 15px;
+    margin: 0 auto;
+    .card-header{
+      border: none;
+      background: white;
+      .card-title{
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+    &.top-rated, &.under-rated{
+      .number-rating{
+        li{
+          justify-content: space-between;
+          align-items: center;
+          a{
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+          }
+          .rating{
+            span{
+              font-size: 12px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+    &.top-rated{
+      span{
+        color: #00C21A;
+      }
+    }
+    &.under-rated{
+      span{
+        color: #FF4500;
+      }
+    }
+  }
+  .recently-added-wrapper{
+    .card-body{
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      li{
+        padding: 10px 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        transition: .3s;
+        &:hover{
+          border-color: #00C21A;
+          transform: scale(1.04);
+        }
+        a{
+          font-size: 14px;
+          color: var(--primary-color);
+          font-weight: 500;
+        }
+        span{
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

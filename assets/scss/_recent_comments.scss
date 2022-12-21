@@ -1,0 +1,68 @@
+.recent-comments{
+  background: var(--body-color);
+  .comment-slider{
+    .comments-swiper2{
+      margin-top: -25px;
+    }
+    .swiper-wrapper {
+      -webkit-transition-timing-function:linear!important; 
+      -o-transition-timing-function:linear!important;
+      transition-timing-function:linear!important; 
+    }
+    .swiper-slide{
+      width: 400px;
+      margin: 10px;
+      box-shadow: $box-shadow-dark;
+      padding: 25px 25px;
+      border-radius: 10px;
+      transition: .4s;
+      &:hover{
+        transform: scale(1.04);
+      }
+      .media{
+        .star-rating{
+          padding: 7px 15px;
+          border-radius: 30px;
+          span{
+            color: white;
+          }
+          &.onestar{
+            background: orangered;
+          }
+          &.twostar{
+            background: rgb(255, 119, 28);
+          }
+          &.threestar{
+            background: var(--orange-color);
+          }
+          &.fourstar{
+            background: rgb(0, 202, 142);
+          }
+          &.fivestar{
+            background: rgb(0, 194, 26);
+          }
+        }
+        .number{
+          margin-left: 15px;
+          p{
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+        .media-body{
+          margin-top: 10px;
+          p{
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /*define how many line you want to show */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

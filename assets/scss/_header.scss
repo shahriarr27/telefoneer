@@ -1,0 +1,34 @@
+#header{
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 15px 0px;
+  background: transparent;
+  .header-box{
+    background: var(--secondary-color);
+    z-index: 100;
+    border-radius: 100px;
+    padding: 10px 15px;
+    // box-shadow: $box-shadow-dark;
+    h1{
+      font-size: 28px;
+      a{
+        color: white;
+      }
+    }
+    .navbar{
+      .getstarted{
+        padding: 7px 15px;
+        border-radius: 50px;
+        border: 2px solid white;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        &:hover{
+          color: var(--orange-color);
+          background: white;
+        }
+      }
+    }
+  }
+}

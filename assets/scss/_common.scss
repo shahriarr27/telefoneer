@@ -1,0 +1,178 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+:root {
+  --font: "Poppins", sans-serif;
+  --body-color: #F9F9FA;
+  --heading-color: #212b36;
+  --text-color: #161c22;
+  --primary-color: #0489d7;
+  --primary-light: #a9d6ff;
+  --secondary-color: #2FC0FE;
+  --glass-color: #58AEE3;
+  --orange-color: #EE9E0A;
+  --blue-dark: #0489d7;
+  --blue-light: #0fa1e5;
+  --white: #ffffff;
+  --offwhite: #D5DDF6;
+  --background: #daffe4;
+  --footer-hover: #ffe600;
+}
+
+$box-shadow-light: 0px 0px 20px rgba(255, 255, 255, 0.2);
+$box-shadow-dark: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button,
+input,
+textarea {
+  transition: .4s;
+}
+
+a,
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+i,
+span,
+a {
+  display: inline-block;
+  transition: .4s;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: var(--text-color);
+  margin: 0px;
+}
+
+section:not(#hero){
+  padding: 50px 0px;
+}
+
+.section-title {
+  h2{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #47b2e4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #6bc1e9;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+//footer
+#footer{
+  text-align: center;
+  padding: 20px 0px;
+  background: rgb(22, 22, 22);
+  color: rgb(221, 221, 221);
+}
