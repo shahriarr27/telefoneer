@@ -5,18 +5,15 @@
   --font: "Poppins", sans-serif;
   --body-color: #F9F9FA;
   --heading-color: #212b36;
-  --text-color: #161c22;
-  --primary-color: #0489d7;
-  --primary-light: #a9d6ff;
-  --secondary-color: #2FC0FE;
-  --glass-color: #58AEE3;
+  --text-color: #343750;
+  --primary-color: #131e39;
+  --primary-light: #1553ff;
+  --secondary-color: #BA1B58;
+  --glass-color: #242e49cb;
   --orange-color: #EE9E0A;
-  --blue-dark: #0489d7;
-  --blue-light: #0fa1e5;
   --white: #ffffff;
   --offwhite: #D5DDF6;
   --background: #daffe4;
-  --footer-hover: #ffe600;
 }
 
 $box-shadow-light: 0px 0px 20px rgba(255, 255, 255, 0.2);
@@ -47,6 +44,15 @@ textarea {
   transition: .4s;
 }
 
+.form-select,.form-control{
+  outline: none;
+  box-shadow: none;
+  border: 1px solid #eee;
+  &:focus{
+    box-shadow: none;
+    border-color: var(--secondary-color);
+  }
+}
 a,
 a:focus,
 input:focus,
@@ -57,7 +63,9 @@ button:focus,
   outline: none;
   box-shadow: none;
 }
-
+a:hover{
+  color: var(--secondary-color);
+}
 a:focus,
 a:hover {
   text-decoration: none;
@@ -128,51 +136,25 @@ section:not(#hero){
 }
 
 .section-title {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  .icon{
+    width: 50px;
+    height: 50px;
+    box-shadow: $box-shadow-dark;
+    border-left: 3px solid var(--secondary-color);
+    i{
+      line-height: 50px;
+    }
+  }
   h2{
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 20px;
   }
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #47b2e4;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #6bc1e9;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-//footer
-#footer{
-  text-align: center;
-  padding: 20px 0px;
-  background: rgb(22, 22, 22);
-  color: rgb(221, 221, 221);
-}

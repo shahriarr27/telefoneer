@@ -1,7 +1,7 @@
 .page-area{
   padding-top: 150px;
   height: 300px;
-  background: #00446b;
+  background: var(--primary-color);
 	position: relative;
   z-index: 5;
 	.home-overly{
@@ -27,12 +27,6 @@
     }
   }
 }
-
-
-$color_1: #3ec1d5;
-$color_2: #444;
-$color_3: #fff;
-$color_4: #3EC1D5;
 
 .blog-page {
   padding: 50px 0px;
@@ -94,7 +88,7 @@ $color_4: #3EC1D5;
     }
     
     .ready-btn {
-      color: var(--secondary-color);
+      color: var(--primary-light);
       cursor: pointer;
       font-size: 17px;
       font-weight: 500;
@@ -111,18 +105,18 @@ $color_4: #3EC1D5;
         position: absolute;
         bottom: 0;left: -5px;
         width: 3px;height: 100%;
-        background: var(--secondary-color);
+        background: var(--primary-light);
         transition: .4s;
       }
       &:hover {
-        color: var(--orange-color);
+        color: var(--secondary-color);
         text-decoration: none;
         &::after{
           content: '';
           position: absolute;
           bottom: 0;left: 100%;
           width: 3px;height: 100%;
-          background: var(--orange-color);
+          background: var(--secondary-color);
         }
       }
     }
@@ -199,13 +193,13 @@ $color_4: #3EC1D5;
     ul {
       li {
         a {
-          color: $color_2;
+          color: var(--heading-color);
           display: block;
           font-size: 14px;
           padding: 10px;
           text-transform: capitalize;
           &:hover {
-            color: $color_4;
+            color: var(--secondary-color);
           }
         }
       }
@@ -224,7 +218,7 @@ $color_4: #3EC1D5;
       .post-content {
         p {
           a {
-            color: $color_2;
+            color: var(--heading-color);
             font-size: 15px;
             font-weight: 400;
             &:hover {
@@ -235,7 +229,7 @@ $color_4: #3EC1D5;
       }
     }
   }
-  .single-blog-page{
+  .single-blog-widget{
     ul{
       li{
         a {

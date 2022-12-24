@@ -1,5 +1,6 @@
 .recent-comments{
   background: var(--body-color);
+  overflow: hidden;
   .comment-slider{
     .comments-swiper2{
       margin-top: -25px;
@@ -33,7 +34,7 @@
             background: rgb(255, 119, 28);
           }
           &.threestar{
-            background: var(--orange-color);
+            background: rgb(255, 194, 28);
           }
           &.fourstar{
             background: rgb(0, 202, 142);
