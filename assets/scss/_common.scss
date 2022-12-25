@@ -136,6 +136,8 @@ section:not(#hero){
 }
 
 .section-title {
+  width: 70%;
+  overflow: hidden;
   text-align: left;
   display: flex;
   justify-content: flex-start;
@@ -158,3 +160,30 @@ section:not(#hero){
   }
 }
 
+@media screen and (max-width: 425px){
+  
+.section-title {
+  width: 70%;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  .icon{
+    width: 40px;
+    height: 40px;
+    box-shadow: $box-shadow-dark;
+    border-left: 3px solid var(--secondary-color);
+    i{
+      line-height: 40px;
+    }
+  }
+  h2{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+}

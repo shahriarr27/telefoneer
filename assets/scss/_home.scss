@@ -120,54 +120,6 @@
     }
   }
 }
-@media (max-width: 991px) {
-	#hero {
-		height: 100vh;
-		text-align: center;
-		.animated {
-			-webkit-animation: none;
-			animation: none;
-		}
-		.hero-img {
-			text-align: center;
-			img {
-				width: 50%;
-			}
-		}
-	}
-}
-@media (max-width: 768px) {
-	#hero {
-		h1 {
-			font-size: 28px;
-			line-height: 36px;
-		}
-		h2 {
-			font-size: 18px;
-			line-height: 24px;
-			margin-bottom: 30px;
-		}
-		.hero-img {
-			img {
-				width: 70%;
-			}
-		}
-	}
-}
-@media (max-width: 575px) {
-	#hero {
-		.hero-img {
-			img {
-				width: 80%;
-			}
-		}
-		.btn-get-started {
-			font-size: 16px;
-			padding: 10px 24px 11px 24px;
-		}
-	}
-}
-
 
 
 //animations
@@ -263,8 +215,8 @@
 .rated-numbers{
   .card{
     border: none;
-    box-shadow: $box-shadow-dark;
     padding: 20px 15px;
+    border: 1px solid #eee;
     margin: 0 auto;
     .card-header{
       border: none;
@@ -328,4 +280,121 @@
       }
     }
   }
+}
+
+
+
+@media (max-width: 768px) {
+	#hero {
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 60px;
+    padding-top: 120px;
+		h1 {
+			font-size: 28px;
+			line-height: 36px;
+		}
+		h2 {
+			font-size: 18px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+		.hero-img {
+			img {
+				width: 70%;
+			}
+		}
+    .search-numbers{
+      .form-control{
+        padding: 12px;
+        font-size: 22px;
+        &::placeholder{
+          font-size: 22px;
+        }
+      }
+      button{
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        width: 40px;height: 40px;
+        i{
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+	}
+  
+}
+
+@media only screen and (max-width: 425px) {
+  #header{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    .header-box{
+      background: var(--glass-color);
+      z-index: 100;
+      border-radius: 100px;
+      padding: 8px 15px;
+      // box-shadow: $box-shadow-dark;
+      h1{
+        font-size: 24px;
+      }
+      .navbar{
+        .getstarted{
+          padding: 6px 15px;
+          border-radius: 50px;
+          border: 2px solid white;
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+          &:hover{
+            color: var(--secondary-color);
+            background: white;
+          }
+        }
+      }
+    }
+  }
+  .recent-comments{
+    .comment-slider{
+      .swiper-slide{
+        width: 300px;
+        .media{
+          .star-rating{
+            padding: 5px 12px;
+            border-radius: 30px;
+            span{
+              font-size: 13px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .rated-numbers{
+    .card{
+      padding: 15px 15px;
+      .card-header,.card-body{
+        padding: 10px 0px;
+      }
+    }
+    .recently-added-wrapper, .top-rated-wrapper, .under-rated-wrapper{
+      .card-body{
+        display: flex;
+        justify-content: space-between;
+        li{
+          padding: 10px 15px;
+          a{
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
 }

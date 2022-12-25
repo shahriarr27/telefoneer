@@ -148,6 +148,8 @@ section:not(#hero) {
 }
 
 .section-title {
+  width: 70%;
+  overflow: hidden;
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,6 +180,40 @@ section:not(#hero) {
   font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 425px) {
+  .section-title {
+    width: 70%;
+    overflow: hidden;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .section-title .icon {
+    width: 40px;
+    height: 40px;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid var(--secondary-color);
+  }
+  .section-title .icon i {
+    line-height: 40px;
+  }
+  .section-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
 
 #header {
@@ -367,48 +403,6 @@ section:not(#hero) {
   width: 90%;
 }
 
-@media (max-width: 991px) {
-  #hero {
-    height: 100vh;
-    text-align: center;
-  }
-  #hero .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
-  #hero .hero-img {
-    text-align: center;
-  }
-  #hero .hero-img img {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-  #hero .hero-img img {
-    width: 70%;
-  }
-}
-
-@media (max-width: 575px) {
-  #hero .hero-img img {
-    width: 80%;
-  }
-  #hero .btn-get-started {
-    font-size: 16px;
-    padding: 10px 24px 11px 24px;
-  }
-}
-
 @-webkit-keyframes up-down {
   0% {
     -webkit-transform: translateY(10px);
@@ -517,9 +511,8 @@ section:not(#hero) {
 
 .rated-numbers .card {
   border: none;
-  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 20px 15px;
+  border: 1px solid #eee;
   margin: 0 auto;
 }
 
@@ -595,6 +588,117 @@ section:not(#hero) {
 
 .rated-numbers .under-rated-wrapper .rating span {
   color: orangered;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    overflow: hidden;
+    height: 100%;
+    padding-bottom: 60px;
+    padding-top: 120px;
+  }
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 70%;
+  }
+  #hero .search-numbers .form-control {
+    padding: 12px;
+    font-size: 22px;
+  }
+  #hero .search-numbers .form-control::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+  #hero .search-numbers .form-control:-ms-input-placeholder {
+    font-size: 22px;
+  }
+  #hero .search-numbers .form-control::-ms-input-placeholder {
+    font-size: 22px;
+  }
+  #hero .search-numbers .form-control::placeholder {
+    font-size: 22px;
+  }
+  #hero .search-numbers button {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  #hero .search-numbers button i {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #header {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 100;
+  }
+  #header .header-box {
+    background: var(--glass-color);
+    z-index: 100;
+    border-radius: 100px;
+    padding: 8px 15px;
+  }
+  #header .header-box h1 {
+    font-size: 24px;
+  }
+  #header .header-box .navbar .getstarted {
+    padding: 6px 15px;
+    border-radius: 50px;
+    border: 2px solid white;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #header .header-box .navbar .getstarted:hover {
+    color: var(--secondary-color);
+    background: white;
+  }
+  .recent-comments .comment-slider .swiper-slide {
+    width: 300px;
+  }
+  .recent-comments .comment-slider .swiper-slide .media .star-rating {
+    padding: 5px 12px;
+    border-radius: 30px;
+  }
+  .recent-comments .comment-slider .swiper-slide .media .star-rating span {
+    font-size: 13px;
+    color: white;
+  }
+  .rated-numbers .card {
+    padding: 15px 15px;
+  }
+  .rated-numbers .card .card-header, .rated-numbers .card .card-body {
+    padding: 10px 0px;
+  }
+  .rated-numbers .recently-added-wrapper .card-body, .rated-numbers .top-rated-wrapper .card-body, .rated-numbers .under-rated-wrapper .card-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rated-numbers .recently-added-wrapper .card-body li, .rated-numbers .top-rated-wrapper .card-body li, .rated-numbers .under-rated-wrapper .card-body li {
+    padding: 10px 15px;
+  }
+  .rated-numbers .recently-added-wrapper .card-body li a, .rated-numbers .top-rated-wrapper .card-body li a, .rated-numbers .under-rated-wrapper .card-body li a {
+    font-size: 13px;
+  }
 }
 
 .page-area {
@@ -1025,6 +1129,8 @@ section:not(#hero) {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .result-wrapper .meta-info .meta-data {
@@ -1556,12 +1662,6 @@ section:not(#hero) {
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .faq .faq-list {
-    padding: 0;
-  }
-}
-
 .right-side .widget {
   padding: 15px 15px;
   border-radius: 10px;
@@ -1592,6 +1692,54 @@ section:not(#hero) {
 
 .right-side .widget .widget-body a:hover {
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .single-page-header {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .single-page-header .search-numbers .form-control {
+    padding: 12px;
+    font-size: 22px;
+  }
+  .single-page-header .search-numbers .form-control::-webkit-input-placeholder {
+    font-size: 22px;
+  }
+  .single-page-header .search-numbers .form-control:-ms-input-placeholder {
+    font-size: 22px;
+  }
+  .single-page-header .search-numbers .form-control::-ms-input-placeholder {
+    font-size: 22px;
+  }
+  .single-page-header .search-numbers .form-control::placeholder {
+    font-size: 22px;
+  }
+  .single-page-header .search-numbers button {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  .single-page-header .search-numbers button i {
+    color: white;
+    font-size: 20px;
+  }
+  .single-page-header .search-numbers .iti--separate-dial-code .iti__selected-flag {
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .result-wrapper .no-pattern {
+    display: block;
+    width: 100%;
+  }
+}
+
+.page-wrapper .text-contents {
+  text-align: justify;
 }
 
 .page-wrapper .widget {

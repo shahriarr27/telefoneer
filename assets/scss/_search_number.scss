@@ -113,7 +113,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-
+    flex-wrap: wrap;
     .meta-data {
       width: auto;
       padding: 5px 15px;
@@ -595,13 +595,6 @@
 		}
 	}
 }
-@media (max-width: 1200px) {
-	.faq {
-		.faq-list {
-			padding: 0;
-		}
-	}
-}
 
 .right-side{
   .widget{
@@ -630,4 +623,45 @@
     }
   }
 
+}
+
+@media screen and (max-width: 768px) {
+  
+  .single-page-header {
+    width: 80%;
+    margin: 0 auto;
+    .search-numbers{
+      .form-control{
+        padding: 12px;
+        font-size: 22px;
+        &::placeholder{
+          font-size: 22px;
+        }
+      }
+      button{
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        width: 40px;height: 40px;
+        i{
+          color: white;
+          font-size: 20px;
+        }
+      }
+      .iti--separate-dial-code .iti__selected-flag{
+        padding-right: 10px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  
+  .result-wrapper {
+    .no-pattern{
+      display: block;
+      width: 100%;
+    }
+  }
 }
