@@ -47,7 +47,9 @@ textarea {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  padding: 10px 15px;
 }
 
 .form-select:focus, .form-control:focus {
@@ -1149,8 +1151,46 @@ section:not(#hero) {
   border-color: var(--secondary-color);
 }
 
-.result-wrapper .meta-info .meta-data .pattern a {
-  margin-right: 5px;
+.result-wrapper .meta-info .meta-data.scam {
+  background: #F34841;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.tm {
+  background: #F89838;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.market {
+  background: #F8E008;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.poll {
+  background: #8CC340;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.safe {
+  background: #0F9D4F;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.courier {
+  background: #8E58DB;
+  border: none;
+  color: white;
+}
+
+.result-wrapper .meta-info .meta-data.other {
+  background: #808C92;
+  border: none;
+  color: white;
 }
 
 .result-wrapper .meta-info .rating-summary .star-rating {
@@ -1338,6 +1378,14 @@ section:not(#hero) {
   color: var(--secondary-color);
 }
 
+.stat-wrapper {
+  padding: 50px 30px;
+  margin: 30px 0px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
 .add-review {
   padding: 50px 30px;
   margin: 30px 0px;
@@ -1402,6 +1450,26 @@ section:not(#hero) {
 
 .add-review .review-inner .rating:not(:checked) > label:hover ~ label {
   color: var(--secondary-color);
+}
+
+.add-review .review-inner .review-form .choices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0px;
+}
+
+.add-review .review-inner .review-form .choices label {
+  font-size: 15px;
 }
 
 .add-review .review-inner .review-form .form-group-hidden {
@@ -1487,6 +1555,25 @@ section:not(#hero) {
   margin-bottom: 60px;
 }
 
+.comments-wrapper .comment-sort p {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.comments-wrapper .comment-sort p .sort {
+  font-size: 22px;
+}
+
 .comments-wrapper .single-comment {
   margin-top: 20px;
   border-radius: 10px;
@@ -1550,12 +1637,23 @@ section:not(#hero) {
   font-size: 14px;
 }
 
+.comments-wrapper .single-comment .actions .like-report {
+  display: inline-block;
+}
+
 .comments-wrapper .single-comment .actions a {
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #aaa;
+}
+
+.comments-wrapper .single-comment .actions a:hover {
+  color: var(--secondary-color);
 }
 
 .comments-wrapper .single-comment .reply-form {
@@ -1692,6 +1790,43 @@ section:not(#hero) {
 
 .right-side .widget .widget-body a:hover {
   color: var(--secondary-color);
+}
+
+.inner-heading {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.inner-heading h4 {
+  font-size: 22px;
+}
+
+.number-formats {
+  margin: 60px 0px;
+  border: 1px solid #eee;
+  padding: 20px 25px;
+  border-radius: 10px;
+}
+
+.number-formats .contents ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.number-formats .contents ul li {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {

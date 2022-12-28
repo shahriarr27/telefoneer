@@ -47,7 +47,9 @@ textarea {
 .form-select,.form-control{
   outline: none;
   box-shadow: none;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  padding: 10px 15px;
   &:focus{
     box-shadow: none;
     border-color: var(--secondary-color);

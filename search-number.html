@@ -112,7 +112,7 @@
                         <i class="bi bi-star-fill" aria-hidden="true"></i>
                         <i class="bi bi-star-fill" aria-hidden="true"></i>
                         <i class="bi bi-star-fill" aria-hidden="true"></i>
-  
+
                         <div class="front-stars" style="width: 86%">
                           <i class="bi bi-star-fill" aria-hidden="true"></i>
                           <i class="bi bi-star-fill" aria-hidden="true"></i>
@@ -272,6 +272,27 @@
             </div>
             <div class="section-title text-center py-3" data-aos="fade-left">
               <span class="icon">
+                <i class="bi bi-graph-up"></i>
+              </span>
+              <h2>Number Statistics</h2>
+            </div>
+            <div class="stat-wrapper" data-aos="fade-up" data-aos-delay="500">
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="chart-title text-center">Scores</p>
+                  <div id="piechart" style="width: auto; height: auto"></div>
+                </div>
+                <div class="col-md-6">
+                  <p class="chart-title text-center">Activity (last 3 months)</p>
+                  <div id="chart_div" style="width: auto; height: auto"></div>
+                  <h3 class="total-lookups text-center text-danger">45</h3>
+                  <p class="small text-center">Number of searches (last 3 months)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-title text-center py-3" data-aos="fade-left">
+              <span class="icon">
                 <i class="bi bi-star-fill"></i>
               </span>
               <h2>Add Review</h2>
@@ -297,32 +318,82 @@
                     </div>
                     <div class="form-group-hidden">
                       <div class="form-group mb-3">
-                        <select name="category" id="category" class="form-select">
-                          <option value="">Select Category</option>
-                          <option value="1">Spam</option>
-                          <option value="2">Promotional</option>
-                          <option value="3">Threat</option>
-                        </select>
-                      </div>
-                      <div class="form-group mb-3">
-                        <textarea name="review" id="review" cols="30" rows="5" class="form-control"
-                          placeholder="write your review about this phone number"></textarea>
-                      </div>
-                      <div class="form-group mb-3">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          <label class="form-check-label" for="flexCheckDefault">
-                            I agree to this condition
-                          </label>
+                        <div class="choices">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote1">
+                            <label class="form-check-label" for="vote1">
+                              Scam / Robocall
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote2">
+                            <label class="form-check-label" for="vote2">
+                              Telemarketing
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote3">
+                            <label class="form-check-label" for="vote3">
+                              Market research
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote4">
+                            <label class="form-check-label" for="vote4">
+                              Opinion poll
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote5">
+                            <label class="form-check-label" for="vote5">
+                              Safe
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote6">
+                            <label class="form-check-label" for="vote6">
+                              Courier/delivery
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="vote" id="vote7">
+                            <label class="form-check-label" for="vote7">
+                              Other
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group mb-3">
+                              <input type="text" class="form-control" placeholder="Whose number is it (optional)">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group mb-3">
+                              <input type="text" class="form-control" placeholder="Address of this number (optional)">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mb-3">
+                          <textarea name="review" id="review" cols="30" rows="5" class="form-control"
+                            placeholder="Write your review about this phone number"></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              I agree to this condition
+                            </label>
+                          </div>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button type="submit" class="btn btn-primary">Send</button>
                         </div>
                       </div>
-                      <div class="text-center mb-3">
-                        <button type="submit" class="btn btn-primary">Send</button>
-                      </div>
                     </div>
-                    <p class="small text-center">Help other forum visitors by sharing your experience with this phone
-                      number. Is this phone number dangerous or annoying? Did you expect a call from this number
-                      0850830880 or was it an unsolicited call?</p>
+                      <p class="small text-center">Help other forum visitors by sharing your experience with this phone
+                        number. Is this phone number dangerous or annoying? Did you expect a call from this number
+                        0850830880 or was it an unsolicited call?</p>
                   </form>
                 </div>
               </div>
@@ -333,163 +404,186 @@
               </span>
               <h2>Comments</h2>
             </div>
-            <div class="comments-wrapper">
-              <div class="single-comment" data-aos="fade-up" data-aos-delay="100">
-                <div class="top d-flex align-items-center">
-                  <div class="stars fivestar">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
+
+            <div class="comments-wrapper" id="comment-list">
+              <div class="comment-sort text-end" data-aos="fade-up">
+                <p>
+                  <span class="sort-text">Sort by latest </span>
+                  <span class="bi bi-sort-up sort asc" id="sort-icon" role="button" aria-pressed="false" data-sort="date-month" aria-hidden="false"></span></p>
+              </div>
+              <div class="list">
+                <div class="single-comment" data-aos="fade-up" data-aos-delay="100">
+                  <div class="top d-flex align-items-center">
+                    <div class="stars fivestar">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="author-info d-flex align-items-center">
+                      <p class="author-name">John Doe</p>
+                      <span class="ip2location-flag-16 flag-round flag-us"></span>
+                      <p class="time date-month" data-attribute="01-Jan-2022">01-Jan-2022</p>
+                    </div>
                   </div>
-                  <div class="author-info d-flex align-items-center">
-                    <p class="author-name">John Doe</p>
-                    <span class="ip2location-flag-16 flag-round flag-us"></span>
-                    <p class="time">16 November, 2022</p>
-                  </div>
-                </div>
-                <div class="body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                  <div class="actions">
-                    <a href="javascript::void(0)" class="reply-btn">Reply</a>
-                    <a href="javascript::void(0)" class="report">Report</a>
-                    <div class="reply-form mt-3">
-                      <form action="#">
-                        <div class="form-group">
-                          <textarea name="reply" class="form-control" id="" cols="30" rows="2"
-                            placeholder="reply to this comment"></textarea>
-                          <button type="submit">Reply</button>
-                        </div>
-                      </form>
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="actions">
+                      <a href="javascript::void(0)" class="reply-btn"><i class="bi bi-reply-fill"></i></a>
+                      <div class="like-report">
+                        <a href="javascript::void(0)" class="like"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                        <a href="javascript::void(0)" class="report"><i class="bi bi-exclamation-triangle-fill"></i></a>
+                      </div>
+                      <div class="reply-form mt-3">
+                        <form action="#">
+                          <div class="form-group">
+                            <textarea name="reply" class="form-control" id="" cols="30" rows="2"
+                              placeholder="reply to this comment"></textarea>
+                            <button type="submit">Reply</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="single-comment" data-aos="fade-up" data-aos-delay="200">
-                <div class="top d-flex align-items-center">
-                  <div class="stars fourstar">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
+                <div class="single-comment" data-aos="fade-up" data-aos-delay="200">
+                  <div class="top d-flex align-items-center">
+                    <div class="stars fourstar">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <div class="author-info d-flex align-items-center">
+                      <p class="author-name">John Doe</p>
+                      <span class="ip2location-flag-16 flag-round flag-us"></span>
+                      <p class="time date-month" data-attribute="02-Feb-2022">02-Feb-2022</p>
+                    </div>
                   </div>
-                  <div class="author-info d-flex align-items-center">
-                    <p class="author-name">John Doe</p>
-                    <span class="ip2location-flag-16 flag-round flag-us"></span>
-                    <p class="time">16 November, 2022</p>
-                  </div>
-                </div>
-                <div class="body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                  <div class="actions">
-                    <a href="javascript::void(0)" class="reply-btn">Reply</a>
-                    <a href="javascript::void(0)" class="report">Report</a>
-                    <div class="reply-form mt-3">
-                      <form action="#">
-                        <div class="form-group">
-                          <textarea name="reply" class="form-control" id="" cols="30" rows="2"
-                            placeholder="reply to this comment"></textarea>
-                          <button type="submit">Reply</button>
-                        </div>
-                      </form>
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="actions">
+                      <a href="javascript::void(0)" class="reply-btn"><i class="bi bi-reply-fill"></i></a>
+                      <div class="like-report">
+                        <a href="javascript::void(0)" class="like"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                        <a href="javascript::void(0)" class="report"><i class="bi bi-exclamation-triangle-fill"></i></a>
+                      </div>
+                      <div class="reply-form mt-3">
+                        <form action="#">
+                          <div class="form-group">
+                            <textarea name="reply" class="form-control" id="" cols="30" rows="2"
+                              placeholder="reply to this comment"></textarea>
+                            <button type="submit">Reply</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="single-comment" data-aos="fade-up" data-aos-delay="300">
-                <div class="top d-flex align-items-center">
-                  <div class="stars threestar">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
+                <div class="single-comment" data-aos="fade-up" data-aos-delay="300">
+                  <div class="top d-flex align-items-center">
+                    <div class="stars threestar">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <div class="author-info d-flex align-items-center">
+                      <p class="author-name">John Doe</p>
+                      <span class="ip2location-flag-16 flag-round flag-us"></span>
+                      <p class="time date-month" data-attribute="03-Mar-2022">03-Mar-2022</p>
+                    </div>
                   </div>
-                  <div class="author-info d-flex align-items-center">
-                    <p class="author-name">John Doe</p>
-                    <span class="ip2location-flag-16 flag-round flag-us"></span>
-                    <p class="time">16 November, 2022</p>
-                  </div>
-                </div>
-                <div class="body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                  <div class="actions">
-                    <a href="javascript::void(0)" class="reply-btn">Reply</a>
-                    <a href="javascript::void(0)" class="report">Report</a>
-                    <div class="reply-form mt-3">
-                      <form action="#">
-                        <div class="form-group">
-                          <textarea name="reply" class="form-control" id="" cols="30" rows="2"
-                            placeholder="reply to this comment"></textarea>
-                          <button type="submit">Reply</button>
-                        </div>
-                      </form>
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="actions">
+                      <a href="javascript::void(0)" class="reply-btn"><i class="bi bi-reply-fill"></i></a>
+                      <div class="like-report">
+                        <a href="javascript::void(0)" class="like"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                        <a href="javascript::void(0)" class="report"><i class="bi bi-exclamation-triangle-fill"></i></a>
+                      </div>
+                      <div class="reply-form mt-3">
+                        <form action="#">
+                          <div class="form-group">
+                            <textarea name="reply" class="form-control" id="" cols="30" rows="2"
+                              placeholder="reply to this comment"></textarea>
+                            <button type="submit">Reply</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="single-comment" data-aos="fade-up" data-aos-delay="400">
-                <div class="top d-flex align-items-center">
-                  <div class="stars twostar">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
+                <div class="single-comment" data-aos="fade-up" data-aos-delay="400">
+                  <div class="top d-flex align-items-center">
+                    <div class="stars twostar">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <div class="author-info d-flex align-items-center">
+                      <p class="author-name">John Doe</p>
+                      <span class="ip2location-flag-16 flag-round flag-us"></span>
+                      <p class="time date-month" data-attribute="01-May-2022">01-May-2022</p>
+                    </div>
                   </div>
-                  <div class="author-info d-flex align-items-center">
-                    <p class="author-name">John Doe</p>
-                    <span class="ip2location-flag-16 flag-round flag-us"></span>
-                    <p class="time">16 November, 2022</p>
-                  </div>
-                </div>
-                <div class="body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                  <div class="actions">
-                    <a href="javascript::void(0)" class="reply-btn">Reply</a>
-                    <a href="javascript::void(0)" class="report">Report</a>
-                    <div class="reply-form mt-3">
-                      <form action="#">
-                        <div class="form-group">
-                          <textarea name="reply" class="form-control" id="" cols="30" rows="2"
-                            placeholder="reply to this comment"></textarea>
-                          <button type="submit">Reply</button>
-                        </div>
-                      </form>
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="actions">
+                      <a href="javascript::void(0)" class="reply-btn"><i class="bi bi-reply-fill"></i></a>
+                      <div class="like-report">
+                        <a href="javascript::void(0)" class="like"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                        <a href="javascript::void(0)" class="report"><i class="bi bi-exclamation-triangle-fill"></i></a>
+                      </div>
+                      <div class="reply-form mt-3">
+                        <form action="#">
+                          <div class="form-group">
+                            <textarea name="reply" class="form-control" id="" cols="30" rows="2"
+                              placeholder="reply to this comment"></textarea>
+                            <button type="submit">Reply</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="single-comment" data-aos="fade-up" data-aos-delay="500">
-                <div class="top d-flex align-items-center">
-                  <div class="stars onestar">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
+                <div class="single-comment" data-aos="fade-up" data-aos-delay="500">
+                  <div class="top d-flex align-items-center">
+                    <div class="stars onestar">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                    <div class="author-info d-flex align-items-center">
+                      <p class="author-name">John Doe</p>
+                      <span class="ip2location-flag-16 flag-round flag-us"></span>
+                      <p class="time date-month" data-attribute="02-May-2022">02-May-2022</p>
+                    </div>
                   </div>
-                  <div class="author-info d-flex align-items-center">
-                    <p class="author-name">John Doe</p>
-                    <span class="ip2location-flag-16 flag-round flag-us"></span>
-                    <p class="time">16 November, 2022</p>
-                  </div>
-                </div>
-                <div class="body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                  <div class="actions">
-                    <a href="javascript::void(0)" class="reply-btn">Reply</a>
-                    <a href="javascript::void(0)" class="report">Report</a>
-                    <div class="reply-form mt-3">
-                      <form action="#">
-                        <div class="form-group">
-                          <textarea name="reply" class="form-control" id="" cols="30" rows="2"
-                            placeholder="reply to this comment"></textarea>
-                          <button type="submit">Reply</button>
-                        </div>
-                      </form>
+                  <div class="body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                    <div class="actions">
+                      <a href="javascript::void(0)" class="reply-btn"><i class="bi bi-reply-fill"></i></a>
+                      <div class="like-report">
+                        <a href="javascript::void(0)" class="like"><i class="bi bi-hand-thumbs-up-fill"></i></a>
+                        <a href="javascript::void(0)" class="report"><i class="bi bi-exclamation-triangle-fill"></i></a>
+                      </div>
+                      <div class="reply-form mt-3">
+                        <form action="#">
+                          <div class="form-group">
+                            <textarea name="reply" class="form-control" id="" cols="30" rows="2"
+                              placeholder="reply to this comment"></textarea>
+                            <button type="submit">Reply</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -503,7 +597,7 @@
             </div>
 
             <!-- ======= Frequently Asked Questions Section ======= -->
-            <div id="faq" class="faq section-bg mb-4" data-aos="fade-up" >
+            <div id="faq" class="faq section-bg mb-4" data-aos="fade-up">
               <div data-aos="fade-up">
                 <div class="faq-list">
                   <ul>
@@ -581,6 +675,21 @@
               </div>
             </div>
             <!-- End Frequently Asked Questions Section -->
+            <div class="number-formats" data-aos="fade-up">
+              <div class="inner-heading">
+                <h4>Possible Number Formats</h4>
+              </div>
+              <div class="contents">
+                <ul>
+                  <li>+3197010282991</li>
+                  <li>003197010282991</li>
+                  <li>097 010282991</li>
+                  <li>+31 97010282991</li>
+                  <li>97010282991</li>
+                  <li>tel:+31-97010282991</li>
+                </ul>
+              </div>
+            </div>
             <!-- end left col -->
           </div>
           <div class="col-lg-3">
@@ -591,18 +700,46 @@
                 </div>
               </div>
               <div class="widget mb-4">
-                  <div class="widget-header">
-                    <h4 class="widget-title">Similar Numbers</h4>
-                  </div>
-                  <div class="widget-body">
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                    <a href="javascrip::void(0)">0123456214</a>
-                  </div>
+                <div class="widget-header">
+                  <h4 class="widget-title">Similar Numbers</h4>
+                </div>
+                <div class="widget-body">
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                </div>
+              </div>
+              <div class="widget mb-4">
+                <div class="widget-header">
+                  <h4 class="widget-title">Recent Viewed Numbers</h4>
+                </div>
+                <div class="widget-body">
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                </div>
+              </div>
+              <div class="widget mb-4">
+                <div class="widget-header">
+                  <h4 class="widget-title">Recent Searched Numbers</h4>
+                </div>
+                <div class="widget-body">
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                  <a href="javascrip::void(0)">0123456214</a>
+                </div>
               </div>
             </div>
           </div>
@@ -635,7 +772,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.min.js"></script>
-
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
