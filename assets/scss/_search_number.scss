@@ -444,7 +444,89 @@
         flex-wrap: wrap;
         padding: 20px 0px;
         label{
-          font-size: 15px;
+          font-size: 13px;
+          cursor: pointer;
+        }
+        .form-check-input{
+          border-width: 2px;
+          &.v1{
+            border-color: #F34841;
+          }
+          &.v2{
+            border-color: #F89838;
+          }
+          &.v3{
+            border-color: #F8E008;
+          }
+          &.v4{
+            border-color: #8CC340;
+          }
+          &.v5{
+            border-color: #0F9D4F;
+          }
+          &.v6{
+            border-color: #8E58DB;
+          }
+          &.v7{
+            border-color: #808C92;
+          }
+        }
+        .form-check-input:focus{
+          outline: none;
+          box-shadow: none;
+          &.v1{
+            border-color: #F34841;
+          }
+          &.v2{
+            border-color: #F89838;
+          }
+          &.v3{
+            border-color: #F8E008;
+          }
+          &.v4{
+            border-color: #8CC340;
+          }
+          &.v5{
+            border-color: #0F9D4F;
+          }
+          &.v6{
+            border-color: #8E58DB;
+          }
+          &.v7{
+            border-color: #808C92;
+          }
+        }
+        .form-check-input:checked{
+            &.v1{
+              border-color: #F34841;
+              background-color: #F34841;
+            }
+            &.v2{
+              border-color: #F89838;
+              background-color: #F89838;
+            }
+            &.v3{
+              border-color: #F8E008;
+              background-color: #F8E008;
+            }
+            &.v4{
+              border-color: #8CC340;
+              background-color: #8CC340;
+            }
+            &.v5{
+              border-color: #0F9D4F;
+              background-color: #0F9D4F;
+            }
+            &.v6{
+              border-color: #8E58DB;
+              background-color: #8E58DB;
+            }
+            &.v7{
+              border-color: #808C92;
+              background-color: #808C92;
+            }
+            outline: none;
+            box-shadow: none;
         }
       }
       .form-group-hidden{

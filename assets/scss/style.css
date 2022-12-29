@@ -1469,7 +1469,115 @@ section:not(#hero) {
 }
 
 .add-review .review-inner .review-form .choices label {
-  font-size: 15px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input {
+  border-width: 2px;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v1 {
+  border-color: #F34841;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v2 {
+  border-color: #F89838;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v3 {
+  border-color: #F8E008;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v4 {
+  border-color: #8CC340;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v5 {
+  border-color: #0F9D4F;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v6 {
+  border-color: #8E58DB;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input.v7 {
+  border-color: #808C92;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v1 {
+  border-color: #F34841;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v2 {
+  border-color: #F89838;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v3 {
+  border-color: #F8E008;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v4 {
+  border-color: #8CC340;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v5 {
+  border-color: #0F9D4F;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v6 {
+  border-color: #8E58DB;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:focus.v7 {
+  border-color: #808C92;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v1 {
+  border-color: #F34841;
+  background-color: #F34841;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v2 {
+  border-color: #F89838;
+  background-color: #F89838;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v3 {
+  border-color: #F8E008;
+  background-color: #F8E008;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v4 {
+  border-color: #8CC340;
+  background-color: #8CC340;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v5 {
+  border-color: #0F9D4F;
+  background-color: #0F9D4F;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v6 {
+  border-color: #8E58DB;
+  background-color: #8E58DB;
+}
+
+.add-review .review-inner .review-form .choices .form-check-input:checked.v7 {
+  border-color: #808C92;
+  background-color: #808C92;
 }
 
 .add-review .review-inner .review-form .form-group-hidden {
